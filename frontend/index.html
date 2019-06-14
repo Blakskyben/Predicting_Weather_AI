@@ -20,7 +20,10 @@
                     <a class="nav-link" href="#background">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Predict Weather</a>
+                    <a class="nav-link" href="#request">Predict Weather</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#results">Results</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -50,6 +53,27 @@
             <h2>About the Project</h2>
             <hr>
             <p>Ben came up with this project a few months ago, the date being 13/6/19 as of writing this. So what exactly is this project aiming to do? This project, which Ben calls "Predicting Weather with AI", is exactly what the title says. The program takes some weather conditions and "spits" out what will happen next. An example of this is, let's say Ben puts a pressure of 1019 and a humidity of 23. Then the program would output, or show you what would happen, like it would be clear skies that day. As Ben stated above, he wants to use his skills to help the world. When he came up with this idea, he realized, that if he could create this, it could actually help to warn people about upcoming weather conditions. Ben hopes to be able to spread this program throught the internet, and possibly farther to help people.</p>
+        </div>
+        <div id="request">
+            <h2>Request to Predict a Weather Condition</h2>
+            <hr>
+            <form action="/request/Prediction" method="POST">
+                <input type="number" name="humidity" placeholder="Humidity">
+                <input type="number" name="pressure" placeholder="Barometric Pressure">
+                <input type="submit">
+            </form>
+        </div>
+        <div id="results">
+            <h2>Results</h2>
+            <hr>
+            <script>
+                const userAction = async () => {
+                const response = await fetch('http://localhost:5000/requestPrediction');
+                const myJson = await response.json();
+                console.log(myJson);
+                userAction();
+                }
+            </script>
         </div>
     </body>
 </html>

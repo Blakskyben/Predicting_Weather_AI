@@ -18,6 +18,38 @@ nav{
     background-position: top;
 }
 
+#request{
+     height: 45vh; 
+     background-color: #26547c; 
+}
+
+#request *, #results *{
+    color: white !important;
+    text-align: center;
+}
+
+#request input{
+    color: black !important;
+    display: block !important;
+    margin: auto;
+    margin-top: 20px;
+    height: 50px;
+    width: 200px;
+}
+
+#results{
+    background-color: #ef709d; 
+    height: 50vh;
+}
+
+#request h2{
+    padding-top: 20px;
+}
+
+#results h2{
+    padding-top: 20px;
+}
+
 #aboutA, #aboutA p, #aboutP, #aboutP p{
     height: 35vh; 
     font-size: 22px;
