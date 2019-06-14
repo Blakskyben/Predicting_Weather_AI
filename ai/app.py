@@ -25,6 +25,14 @@ def get(zip):
     return str(weather)
 
 #Making api for "requesting to predict the weather"
-@app.route("/requestPrediction/",methods=[post])
+@app.route("/requestPrediction/",methods=['POST'])
 def postPredict():
-    entry={humidity:}
+    entry={'humidity':request.form['humidity'], 'barometric':request.form['pressure']}
+    entries.insert_one(entry)
+    return 'done'
+
+#Making api for getting the predictions
+@app.route("/getPredictions")
+def getPreds():
+    for x in entries.find():
+        return(x)

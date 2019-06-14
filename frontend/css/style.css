@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400&display=swap');
+*:focus {
+    outline: none;
+}
+*{
+    font-family: 'Raleway', sans-serif;
+    scroll-behavior: smooth;
+}
+nav{
+    position: fixed !important;
+    width: 100vw;
+}
+#background{
+    background-image: url('../background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    height: 94.1vh;
+    background-position: top;
+}
+
+#aboutA, #aboutA p, #aboutP, #aboutP p{
+    height: 35vh; 
+    font-size: 22px;
+}
+
+#aboutA p, #aboutP p{
+    margin-left: 25px;
+    margin-right: 25px;
+    line-height: 50px;
+}
+
+#aboutA{
+    background-color:#26547c;
+}
+
+#aboutP{
+    background-color:#ef709d;
+}
+
+hr{
+    padding: 0 !important;
+    background-color: white;
+    width: 8%;
+}
+#aboutA *, #aboutP *{
+    padding-top: 20px;
+    color: white;
+    text-align: center;
+}
+
+
+#background *{
+    color: white;
+    text-align: center;
+}  
+
+#background h2{
+    padding-top: 46.05vh;
+    margin-bottom: 30px;
+}
+
+@media only screen and (max-width:2250px){
+    #aboutP, #aboutA{
+        height: 45vh; 
+    }
+} 
+
+@media only screen and (max-width:1460px){
+    #aboutP, #aboutA{
+        height: 55vh; 
+    }
+} 
+
+@media only screen and (max-width:1140px){
+    #aboutP, #aboutA{
+        height: 65vh; 
+    }
+} 
+
+@media only screen and (max-width:1005px){
+    #aboutP, #aboutA{
+        height: 75vh; 
+    }
+} 
+
+@media only screen and (max-width:835px){
+    #aboutP, #aboutA{
+        height: 85vh; 
+    }
+} 
+
+@media only screen and (max-width:715px){
+    #aboutP, #aboutA{
+        height: 95vh; 
+    }
+} 
+
+@media only screen and (max-width:630px){
+    #aboutP, #aboutA{
+        height: 105vh; 
+    }
+} 
+
+@media only screen and (max-width:575px){
+    #aboutP, #aboutA{
+        height: 115vh; 
+    }
+} 
+
+@media only screen and (max-width:525px){
+    #aboutP, #aboutA{
+        height: 125vh; 
+    }
+} 
+
+@media only screen and (max-width:485px){
+    #aboutP, #aboutA{
+        height: 135vh; 
+    }
+} 
+
+@media only screen and (max-width:465px){
+    #aboutP, #aboutA{
+        height: 145vh; 
+    }
+} 
+
+@media only screen and (max-width:430px){
+    #aboutP, #aboutA{
+        height: 155vh; 
+    }
+} 
