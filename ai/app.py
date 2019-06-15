@@ -1,12 +1,13 @@
 import time 
 import requests
-import pymongo as mongo
+import pymongo 
 from flask import Flask
 
 #get the db all set up
-myClient = mongo.MongoClient("mongodb://localhost:27017/")
+myClient = pymongo.MongoClient("mongodb://localhost:27017/db")
 mydb = myClient["requests"]
 entries = mydb["entries"]
+results = mydb["results"]
 
 app = Flask(__name__)
 #Making api for ai
@@ -32,7 +33,13 @@ def postPredict():
     return 'done'
 
 #Making api for getting the predictions
+@app.route("/uploadResults/<humidity>/<pressure>",methods=["post"])
+def upload(humidity,pressure):
+        result={'humidity':humidity,'pressure':pressure}
+        results.insert_one(result)
+        return 'done'
+
 @app.route("/getPredictions")
 def getPreds():
-    for x in entries.find():
+    for x in results.find():
         return(x)
